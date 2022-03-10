@@ -1,4 +1,4 @@
-//type//
+//data type//
 console.log("string"); //text//
 console.log(2); //number//
 console.log(true, false); //booleans - true or false//
@@ -18,6 +18,67 @@ b=2; //한번 정의된 변수는 다시 정의해줄 필요 없음//
 //array//
 const daysOfWeek =["mon", "tue", "wen"]; //list of data in one var//
 console.log(daysOfWeek[1]); //tue - 데이터를 0부터 셈함//
+daysOfWeek[2] = "wensday"; // 데이터를 변경//
 daysOfWeek.push("thur"); //list에 항목을 추가함//
 
 //object//
+const player = {
+    name: "Choi",
+    points: 10,
+    fat: true,
+};
+console.log(player);
+console.log(player.name);
+console.log(player["name"]);
+
+player.fat = false; // object 안에있는 걸 바꿈//
+player.lastName = "tomato"; //object 안에 항목을 추가함//
+
+//function -- 반복해서 쓰는 코드조각//
+function sayHello(nameOfPerson, age) {
+    console.log("Hello my name is "+nameOfPerson+" I am "+age+" years old");
+}
+sayHello("Choi", 25);
+sayHello(); // function을 실행 시키는 법//
+alert("hi"); //function에 데이터를 보내는 방법//
+
+function plus(a,b) {
+    console.log(a+ b);
+}
+plus(8,60);
+
+
+//object and function//
+const gamer = {
+    name:"Choi",
+    sayHi: function(otherPersonsName){
+        console.log("hello "+otherPersonsName+" nice to meet you");
+    },
+};
+console.log(gamer.name);
+gamer.sayHi("kim");
+
+
+
+//return//  //function의 결과값을 저장함//
+
+const calculator ={
+    plus : function(a, b){
+        return a+b;
+    },
+    minus : function(a, b){
+        return a-b;
+    },
+    divide :function(a,b){
+        return a/b;
+    },
+    times :function(a,b){
+        return a**b;
+    }
+};
+
+const plusResult = calculator.plus(2,3);
+const minusResult = calculator.minus(plusResult, 2);
+const divideResult = calculator.divide(minusResult,2);
+
+console.log(plusResult);

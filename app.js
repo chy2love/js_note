@@ -82,3 +82,33 @@ const minusResult = calculator.minus(plusResult, 2);
 const divideResult = calculator.divide(minusResult,2);
 
 console.log(plusResult);
+
+
+//parseInt()//
+
+console.log(typeof "15", typeof parseInt("15")); //string을 number로 변경함//
+
+//isNaN()//
+const age = parseInt(prompt("how old are you?"));
+
+console.log(isNaN(age)); // boolean값을 반환함
+
+//condition//
+/*
+if(condition){ codition 은 boolean 이여아함
+    condition ==true
+}
+else{
+    condition ==false
+}
+*/
+if (isNaN(age)){
+    console.log("please write a number");
+} else if(age<18) {
+    console.log("you are too young");
+} else{
+    console.log("you can drink");
+}
+
+// && and//
+// || or//

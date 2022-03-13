@@ -117,13 +117,18 @@ console.log(h1);
 
 //events 모든 상태변화 클릭이나 hover 드래그
 //css 와 javascript 의 상호작용
-function handleTitleClick() {
+/*function handleTitleClick() {
   const clickedClass = "clicked";
   if (h1.classList.contains(clickedClass)) {
     h1.classList.remove(clickedClass);
   } else {
     h1.classList.add(clickedClass);
   }
+}
+*/
+
+function handleTitleClick() {
+  h1.classList.toggle("clicked");
 }
 
 h1.addEventListener("click", handleTitleClick);
